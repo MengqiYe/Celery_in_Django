@@ -1,0 +1,28 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static 'bootstrap4/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'font-awesome.min.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+{% include "navbar.html" %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Celery Test</h1>
+  </div>
+
+  {% block content %}
+  {% endblock %}
+
+</div>
+</body>
+<script src="{% static 'bootstrap4/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap4/bootstrap.js' %}"></script>
+</html>
